@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<opt bgColor="0xffff00" scale="3" />
+	<img src="charsPsd.psd" width="32" height="32" />
+	<anim name="idle" rate="12" frames="24, 25, 26, 27" />
+</data>

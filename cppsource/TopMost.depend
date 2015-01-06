@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1420483732 source:c:\users\ohmnivore\desktop\haxedev\flxspriter\cppsource\main.cpp
+	<hx/CFFI.h>
+	<windows.h>
+
+1413168877 c:\users\ohmnivore\desktop\haxedev\flxspriter\cppsource\includes\hx\cffi.h
+	"OS.h"
+	<stdio.h>
+	<stdlib.h>
+	"CFFILoader.h"
+	"CFFIAPI.h"
+
+1413168877 c:\users\ohmnivore\desktop\haxedev\flxspriter\cppsource\includes\hx\os.h
+	<stddef.h>
+	<stdint.h>
+	<errno.h>
+
+1413168877 c:\users\ohmnivore\desktop\haxedev\flxspriter\cppsource\includes\hx\cffiloader.h
+	<android/log.h>
+	<windows.h>
+	<stdio.h>
+	<mach-o/dyld.h>
+	<dlfcn.h>
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	<hx/NekoFunc.h>
+
+1413168877 c:\users\ohmnivore\desktop\haxedev\flxspriter\cppsource\includes\hx\nekofunc.h
+
+1413168877 c:\users\ohmnivore\desktop\haxedev\flxspriter\cppsource\includes\hx\cffiapi.h
+
