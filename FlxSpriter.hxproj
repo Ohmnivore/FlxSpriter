@@ -16,7 +16,6 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="C:\HaxeToolkit\haxe\lib\systools\1,1,0" />
-    <class path="C:\HaxeToolkit\haxe\lib\crashdumper\git" />
     <class path="C:\HaxeToolkit\haxe\lib\flixel-addons\git" />
     <class path="C:\HaxeToolkit\haxe\lib\flixel-ui\git" />
     <class path="C:\HaxeToolkit\haxe\lib\openfl\2,2,0" />
@@ -28,7 +27,7 @@
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="systools=1.1.0&#xA;crashdumper=0.0.1&#xA;flixel-addons=1.1.0&#xA;flixel-ui=1.0.2&#xA;openfl=2.2.0&#xA;flixel=3.3.6&#xA;lime=2.0.4&#xA;network-sandbox&#xA;FLX_NO_GAMEPAD&#xA;lime-legacy&#xA;FLX_NO_SOUND_SYSTEM&#xA;native&#xA;openfl-native&#xA;FLX_NO_FOCUS_LOST_SCREEN&#xA;tools=2.0.4&#xA;crashdumper&#xA;HXCPP_CHECK_POINTER&#xA;FLX_NO_DEBUG&#xA;no-compilation&#xA;NAPE_RELEASE_BUILD&#xA;FLX_NO_TOUCH&#xA;lime-native&#xA;FLX_NO_SOUND_TRAY&#xA;FLX_RENDER_TILE&#xA;safeMode&#xA;windows&#xA;desktop" />
+    <option directives="systools=1.1.0&#xA;flixel-addons=1.1.0&#xA;flixel-ui=1.0.2&#xA;openfl=2.2.0&#xA;flixel=3.3.6&#xA;lime=2.0.4&#xA;FLX_NO_GAMEPAD&#xA;FLX_NO_FOCUS_LOST_SCREEN&#xA;tools=2.0.4&#xA;lime-legacy&#xA;FLX_NO_DEBUG&#xA;no-compilation&#xA;FLX_NO_SOUND_SYSTEM&#xA;NAPE_RELEASE_BUILD&#xA;native&#xA;FLX_NO_TOUCH&#xA;lime-native&#xA;openfl-native&#xA;FLX_NO_SOUND_TRAY&#xA;FLX_RENDER_TILE&#xA;windows&#xA;desktop" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
