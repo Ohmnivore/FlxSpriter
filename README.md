@@ -1,3 +1,5 @@
+![](/SCREENSHOT.png)
+
 Contains open-source software provided by *ImageMagick Studio LLC*
 
 # Downloads
