@@ -16,12 +16,12 @@ FlxSpriter is a tool designed to complement various image-editing software. It a
 
 # QuickStart
 Check out the "sample" directory. To import a sprite, select the "File" menu, and then select "import sprite". Finally, select the XML file you need. Here's an example of XML sprite metadata:
-	<?xml version="1.0" encoding="utf-8" ?>
+	`<?xml version="1.0" encoding="utf-8" ?>
 	<data>
 		<opt bgColor="0x000000" scale="3" />
 		<img src="charsPsd.psd" width="32" height="32" />
 		<anim name="idle" rate="12" frames="24, 25, 26, 27" />
-	</data>
+	</data>`
 
 * bgColor: the color displayed under the sprite
 * scale: X and Y scale multiplier
