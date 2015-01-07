@@ -90,7 +90,6 @@ class Get
 				p += "[0]";
 			
 			var cmd:String = "convert.exe " + p + " " + newp;
-			trace(cmd);
 			Sys.command(cmd, []);
 		}
 	}

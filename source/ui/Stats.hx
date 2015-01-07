@@ -113,7 +113,7 @@ class Stats extends FlxUIGroup
 		
 		if (sprite != null)
 		{
-			sprite.animation.curAnim.frameRate = Std.int(sprite.selectedAnim.rate * speed.value);
+			sprite.animation.curAnim.frameRate = Std.int(sprite.curAnim.rate * speed.value);
 			
 			//if (Std.parseInt(bgColor.text) != null)
 			//{

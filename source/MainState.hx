@@ -1,7 +1,5 @@
 package;
 
-import crashdumper.CrashDumper;
-import crashdumper.SessionData;
 import flixel.addons.ui.FlxUI9SliceSprite;
 import flixel.addons.ui.FlxUIDropDownMenu;
 import flixel.addons.ui.StrIdLabel;
@@ -22,6 +20,7 @@ import sprite.SpriteInfo;
 import haxe.io.Path;
 import sprite.Util;
 import ui.*;
+import util.GetTexturePackerData;
 import util.TopMost;
 
 /**
@@ -88,22 +87,31 @@ class MainState extends FlxState
 			{
 				stats.sprite.reload(true);
 				stats.sprite.onDoneLoading = onReloadSprite;
-				
-				for (a in stats.sprite.info.anims)
-				{
-					if (a.name == stats.sprite.selectedAnim.name)
-					{
-						stats.sprite.selectedAnim = a;
-					}
-				}
 			}
 			else
+			{
 				stats.sprite.reload();
+				stats.sprite.onDoneLoading = onGraphicOnlyReload;
+			}
 		}
 	}
 	private function onReloadSprite():Void
 	{
 		stats.onNew();
+		animList.setSprite(stats.sprite);
+	}
+	private function onGraphicOnlyReload():Void
+	{
+		trace("reloaded");
+		for (a in stats.sprite.info.anims)
+		{
+			trace(a.name, stats.sprite.selectedAnim);
+			
+			if (a.name == stats.sprite.selectedAnim)
+			{
+				stats.sprite.animation.play(a.name, true);
+			}
+		}
 	}
 	
 	private function onFile(ID:String):Void
@@ -128,11 +136,14 @@ class MainState extends FlxState
 	{
 		anim.clear();
 		
+		S.animation.add(A.name, A.frames.copy(), A.rate, true);
+		
 		stats.sprite = S;
 		stats.onNew();
 		anim.add(S);
-		S.selectedAnim = A;
-		S.animation.play(A.name);
+		S.selectedAnim = A.name;
+		S.curAnim = A;
+		S.animation.play(A.name, true);
 		//S.y = FlxG.height / 2 + topBar.height - S.height;
 		//S.x = animList.x + animList.width + (FlxG.width - (animList.x + animList.width)) / 2 - S.width / 2;
 		S.x = FlxG.width - S.width - 5;
@@ -141,6 +152,8 @@ class MainState extends FlxState
 		status.setStatus(S.info.name, A.name);
 		
 		FlxG.camera.bgColor = S.info.bgColor;
+		
+		GetTexturePackerData.getData(S, S.info, A);
 	}
 	
 	/**

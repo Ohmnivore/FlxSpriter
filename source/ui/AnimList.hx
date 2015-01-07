@@ -24,9 +24,11 @@ class AnimList extends FlxUIList
 	{
 		clear();
 		
+		var btnY:Int = 0;
 		for (a in S.info.anims)
 		{
-			var btn:FlxUIButton = new FlxUIButton(0, 0, a.name, function() { onSelect(S, a); } );
+			var btn:FlxUIButton = new FlxUIButton(0, btnY, a.name, function() { onSelect(S, a); } );
+			btnY += 22;
 			Assets.setBtnGraphic(btn);
 			
 			add(btn);

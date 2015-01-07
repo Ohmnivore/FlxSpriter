@@ -16,7 +16,8 @@ class Sprite extends FlxSprite
 	
 	public var info:SpriteInfo;
 	public var path:String;
-	public var selectedAnim:SpriteAnim;
+	public var selectedAnim:String;
+	public var curAnim:SpriteAnim;
 	
 	public function new(Info:SpriteInfo, P:String) 
 	{
@@ -48,14 +49,20 @@ class Sprite extends FlxSprite
 	private function loadFrames(B:BitmapData):Void
 	{
 		loadGraphic(B, true, info.width, info.height, true);
+		info.fullWidth = B.width;
+		info.fullHeight = B.height;
 		
 		scale.set(info.scale, info.scale);
 		updateHitbox();
 		animation.destroyAnimations();
+		//updateFrameData();
 		
 		for (a in info.anims)
 		{
-			animation.add(a.name, a.frames, a.rate, true);
+			if (animation.curAnim != null)
+				animation.curAnim.stop();
+			
+			animation.add(a.name, a.frames.copy(), a.rate, true);
 			animation.play(a.name, true);
 		}
 		

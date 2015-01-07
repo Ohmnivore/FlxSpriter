@@ -19,6 +19,9 @@ class SpriteInfo
 	public var scale:Float;
 	public var bgColor:Int;
 	
+	public var fullWidth:Int;
+	public var fullHeight:Int;
+	
 	public var anims:Array<SpriteAnim> = [];
 	
 	public function new(Name:String, P:String)
@@ -34,6 +37,8 @@ class SpriteInfo
 		
 		if (last.toString() != lastModified.toString())
 		{
+			anims = [];
+			
 			loadFromXml(Xml.parse(Get.getText(path)));
 			lastModified = last;
 			
@@ -72,6 +77,7 @@ class SpriteInfo
 	}
 	private function parseAnim(F:Fast):Void
 	{
+		//trace("anim");
 		anims.push(new SpriteAnim(F.att.name, Std.parseInt(F.att.rate), SpriteAnim.parseFrames(F.att.frames)));
 	}
 }
